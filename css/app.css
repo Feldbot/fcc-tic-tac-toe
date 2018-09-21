@@ -1,0 +1,329 @@
+/* General */
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  /* overflow: hidden; */
+  background: url("../images/blue-background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#wrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  border: 0;
+}
+#app {
+  height: 575px;
+  background-color: rgb(142, 197, 63);
+  border-radius: 10px 0px 10px 10px;
+  box-shadow: 7px 13px 50px 7px #202b4e;
+  padding-top: 10px;
+}
+
+/* Header */
+#header {
+  width: 369px;
+  height: 90px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#reset {
+  grid-area: reset;
+  width: 75px;
+  height: 25px;
+  position: absolute;
+  top: -25px;
+  right: 0;
+  color: white;
+  background-color: rgb(142, 197, 63);
+  border-radius: 6px 6px 0px 0px;
+  font-family: "Bungee";
+  font-size: .8em;
+  letter-spacing: .172em;
+  text-shadow: 1px 1px 2px #777777;
+}
+#reset:hover {
+  cursor: pointer;
+  color: rgb(249, 236, 49);
+  text-shadow: 1px 1px 2px #777777;
+}
+h1 { /* Title */
+  font-family: "Bungee Shade";
+  font-size: 2.4em;
+}
+
+/* Board area */
+#boardArea {
+  display: relative;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: inset 5px 5px 22px 2px #555;
+}
+
+/* Game setup */
+div.gameSetup {
+  text-align: center;
+  width: 300px;
+  padding-top: 25px;
+}
+h2 { /* Setup dialog */
+  font-family: Rajdhani;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+button.setup {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  margin: 0px 10px 0px 10px;
+  background-color: rgb(155, 222, 200);
+  border-radius: 10px;
+  font-family: "Bungee";
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 1px 1px 2px #777777;
+  box-shadow: 5px 5px 12px #AAAAAA;
+}
+button.setup:hover {
+  background-color: rgb(146, 199, 184);
+  color: rgb(249, 236, 49);
+}
+button.difficulty {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* Board */
+#board {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 75px);
+  grid-template-rows: repeat(3, 75px);
+  grid-template-areas:
+  "zero   one    two"
+  "three  four   five"
+  "six    seven  eight";
+  grid-gap: .72em;
+}
+button.squares {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  font-family: "Sunshiney";
+  font-size: 3em;
+  background-color: rgb(155,222,200);
+  color: rgb(83,134,109);
+  cursor: pointer;
+  box-shadow: 5px 5px 12px #AAAAAA;
+}
+button[id="0"] {
+  grid-area: zero;
+}
+button[id="1"] {
+  grid-area: one;
+}
+button[id="2"]{
+  grid-area: two;
+}
+button[id="3"] {
+  grid-area: three;
+}
+button[id="4"] {
+  grid-area: four;
+}
+button[id="5"] {
+  grid-area: five;
+}
+button[id="6"] {
+  grid-area: six;
+}
+button[id="7"] {
+  grid-area: seven;
+}
+button[id="8"] {
+  grid-area: eight;
+}
+
+/* Stats */
+#stats {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(84,163,141);
+  box-shadow: inset 5px 5px 22px 2px rgb(44,85,74);
+}
+#players {
+  display: inline-block;
+  width: 150px;
+  line-height: .5em;
+  position: relative;
+  top: -2px;
+  left: 20px;
+}
+#score {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  line-height: .5em;
+  position: relative;
+  top: -2px;
+  left: 18px;
+}
+#smallStats {
+  display: inline-block;
+  width: 75px;
+  position: relative;
+  top: -3px;
+  left: 21px;
+  line-height: .3em;
+}
+h3, h4, span, span.score {
+  font-family: Bungee;
+  color: white;
+  text-shadow: 1px 1px 2px #555555;
+  letter-spacing: .025em;
+}
+h4, h4.smallStats { /* wins/draws/games */
+  font-family: Rajdhani;
+  font-size: 1em;
+}
+h4#gamesTied {
+  position: relative;
+  left: 4px;
+}
+.currentPlayer {
+  color: rgb(249,236,49);
+}
+
+/* Footer */
+footer {
+  padding: 25px;
+}
+a#footer {
+  display: block;
+  text-align: center;
+  font-family: Rajdhani;
+  font-weight: 300;
+  font-size: .8em;
+  text-decoration: none;
+  color: white;
+}
+a#footer:hover {
+  color: rgb(249,236,49);
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+  #app {
+    height: 475px;
+    box-shadow: 5px 7px 30px 5px #202b4e;
+  }
+
+  /* Header */
+  #header {
+    width: 300px;
+    height: 65px;
+  }
+  object {
+    width: 270px;
+    padding-top: 5px;
+    margin: 0 auto;
+  }
+  #reset {
+    height: 20px;
+    top: -20px;
+    font-size: .7em;
+  }
+  #reset:hover {
+    cursor: pointer;
+    color: rgb(249, 236, 49);
+    text-shadow: 1px 1px 2px #777777;
+  }
+  h1 {
+    font-family: "Bungee Shade";
+    font-size: 2em;
+  }
+
+  /* Board area */
+  #boardArea {
+    width: 270px;
+    height: 270px;
+  }
+  div.gameSetup {
+    width: 270px;
+    padding-top: 15px;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  button.setup {
+    width: 90px;
+    height: 40px;
+  }
+
+  /* Board */
+  #board {
+    left: 20px;
+    top: 20px;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+  }
+  button.squares {
+    width: 65px;
+    height: 65px;
+  }
+
+  /* Stats Area */
+  #stats {
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 270px;
+    height: 100px;
+  }
+  #players {
+    width: 145px;
+    line-height: .5em;
+    top: -3px;
+    left: 12px;
+  }
+  #score {
+    width: 40px;
+    text-align: center;
+    line-height: .6em;
+    top: -3px;
+    left: 8px;
+  }
+  #smallStats {
+    width: 70px;
+    top: -3px;
+    left: 6px;
+    line-height: .4em;
+  }
+  footer {
+    height: 25px;
+    margin-top: 25px;
+    padding: 25px;
+  }
+}
